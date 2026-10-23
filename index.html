@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- Fuente Quicksand -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Icono de pestaña -->
+    <link rel="icon" type="image/png" href="./assets/img/logo_1_ccarb.png">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- LOGO -->
+        <div class="header-logo">
+            <a href="#inicio">
+                <img
+                    src="./assets/img/logo_1_ccarb.png"
+                    class="logo2"
+                    alt="Logo Centro Educativo Ángel"
+                >
+            </a>
+        </div>
+        <div class="header-text">
+            <h1>Centro Educativo Ángel</h1>
+            <p>Bienestar para Todos, A.C.</p>
+        </div>
+
+        <!-- OPCIONES DEL HEADER -->
+        <div class="options">
+
+            <!-- MENÚ DE USUARIO -->
+            <div class="user-menu">
+
+                <a href="#" class="user-icon" aria-label="Menú de usuario">
+                    <i class="bi bi-person"></i>
+                </a>
+
+                <div class="user-dropdown">
+                    <b>¡Usa una sola cuenta!</b>
+
+                    <p>
+                        Accede a más información sobre futuros eventos y talleres.
+                    </p>
+
+                    <a href="./templates/login.html" class="user-btn">
+                        Iniciar sesión
+                    </a>
+
+                    <a href="./templates/registro.html" class="user-btn register-btn">
+                        Crear cuenta
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- BOTÓN DEL MENÚ HAMBURGUESA -->
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <i class="bi bi-list"></i>
+            </button>
+
+            <!-- ENLACES DE NAVEGACIÓN -->
+            <nav class="nav-links" id="nav-links">
+                <a class="a" href="#descubrir">Descubrir</a>
+                <a class="a" href="#talleres">Talleres</a>
+                <a class="a" href="#historia">Historia</a>
+                <a class="a" href="#contacto">Contacto</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="inicio">
+
+        <!-- CARRUSEL DE IMÁGENES -->
+        <section id="gallery" aria-label="Galería de imágenes">
+
+            <div class="gallery-container">
+
+                <figure class="gallery-item">
+                    <img src="./assets/img/main.jpeg" alt="Imagen principal">
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/img/evento.jpeg" alt="Evento del Centro Educativo Ángel">
+                </figure>
+
+            </div>
+
+            <!-- BOTONES DEL CARRUSEL -->
+            <nav class="gallery-navigation" aria-label="Navegación del carrusel">
+                <button class="nav-button prev-button" type="button" aria-label="Imagen anterior">
+                    &lt;
+                </button>
+
+                <button class="nav-button next-button" type="button" aria-label="Imagen siguiente">
+                    &gt;
+                </button>
+            </nav>
+        </section>
+        <!-- ====== DESCUBRIR ===== -->
+        <section id="descubrir" class="talleres">
+            <div class="talleres-header">
+                <span class="talleres-etiqueta">APRENDE ALGO NUEVO</span>
+                <h1>Descubre los nuevos talleres</h1>
+                <p>
+                    Aprende, crea y desarrolla nuevas habilidades
+                    con nuestros talleres para todas las edades.
+                </p>
+            </div>
+
+            <div class="talleres-container">
+
+                <article class="taller-card">
+                    <div class="taller-imagen">
+                        <img
+                            src="./assets/img/computacion_a.jpeg"
+                            alt="Taller de computación para adultos"
+                        >
+                        <span class="taller-numero">01</span>
+                    </div>
+
+                    <div class="taller-info">
+                        <span class="taller-categoria adultos">ADULTOS</span>
+                        <h2>Computación para adultos</h2>
+                        <p>
+                            Aprende a utilizar la tecnología
+                            y desarrolla nuevas habilidades digitales.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="taller-card">
+                    <div class="taller-imagen">
+                        <img
+                            src="./assets/img/computacion_n.jpeg"
+                            alt="Taller de computación para niños"
+                        >
+                        <span class="taller-numero">02</span>
+                    </div>
+
+                    <div class="taller-info">
+                        <span class="taller-categoria ninos">NIÑOS</span>
+                        <h2>Computación para niños</h2>
+                        <p>
+                            Descubre el mundo digital mediante
+                            actividades educativas y creativas.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        
+        <section id="talleres" class="seccion-talleres">
+
+            <div class="talleres-titulo">
+                <span class="talleres-etiqueta">EXPLORA TUS TALENTOS</span>
+                <h1>Nuestros talleres</h1>
+                <p>
+                    Descubre nuevas pasiones, desarrolla tus habilidades
+                    y aprende algo nuevo con nosotros.
+                </p>
+            </div>
+
+            <!-- DANZA -->
+            <div class="categoria-talleres">
+                <h2 class="categoria-titulo">Danza y expresión corporal</h2>
+
+                <div class="talleres-grid">
+
+                    <article class="taller-item danza">
+                        <img src="./assets/img/ballet.jpeg" alt="Ballet">
+                        <span class="taller-edad">2 a 3 años</span>
+                        <h3>Baby Ballet</h3>
+                        <p>Primeros pasos en el mundo de la danza.</p>
+                    </article>
+
+                    <article class="taller-item danza">
+                        <img src="./assets/img/ballet.jpeg" alt="Ballet">
+                        <span class="taller-edad">4 a 5 años</span>
+                        <h3>Pre Ballet</h3>
+                        <p>Coordinación, ritmo y bases del ballet.</p>
+                    </article>
+
+                    <article class="taller-item danza">
+                        <img src="./assets/img/ballet.jpeg" alt="Ballet">
+                        <span class="taller-edad">Desde los 6 años</span>
+                        <h3>Ballet principiantes</h3>
+                        <p>Aprende las técnicas y posiciones básicas.</p>
+                    </article>
+
+                    <article class="taller-item danza">
+                        <img src="./assets/img/ballet.jpeg" alt="Ballet">
+                        <span class="taller-edad">Desde los 6 años</span>
+                        <h3>Ballet intermedio</h3>
+                        <p>Para quienes ya cuentan con conocimientos de ballet.</p>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- MÚSICA -->
+            <div class="categoria-talleres">
+                <h2 class="categoria-titulo">Música</h2>
+
+                <div class="talleres-grid">
+
+                    <article class="taller-item musica">
+                        <img src="./assets/img/piano.jpeg" alt="Piano niños">
+                        <span class="taller-edad">Desde los 7 años</span>
+                        <h3>Piano</h3>
+                        <p>Descubre la música y aprende a tocar el piano.</p>
+                    </article>
+
+                    <article class="taller-item musica">
+                        <img src="./assets/img/piano_a.jpeg" alt="Piano adultos">
+                        <span class="taller-edad">Desde los 7 años</span>
+                        <h3>Piano</h3>
+                        <p>Descubre la música y aprende a tocar el piano.</p>
+                    </article>
+
+                    <article class="taller-item musica">
+                        <span class="taller-icono">♫</span>
+                        <span class="taller-edad">Desde los 7 años</span>
+                        <h3>Batería acústica</h3>
+                        <p>Desarrolla el ritmo y aprende a tocar la batería.</p>
+                    </article>
+
+                    <article class="taller-item musica">
+                        <img src="./assets/img/guitarra_A.jpeg" alt="">
+                        <span class="taller-edad">Desde los 7 años</span>
+                        <h3>Guitarra acústica</h3>
+                        <p>Aprende acordes, ritmos y canciones.</p>
+                    </article>
+
+                    <article class="taller-item musica">
+                        <span class="taller-icono">♫</span>
+                        <span class="taller-edad">Desde los 11 años</span>
+                        <h3>Guitarra eléctrica</h3>
+                        <p>Explora sonidos, riffs y técnicas de guitarra.</p>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- GASTRONOMÍA -->
+            <div class="categoria-talleres">
+                <h2 class="categoria-titulo">Gastronomía y creatividad</h2>
+
+                <div class="talleres-grid">
+
+                    <article class="taller-item gastronomia">
+                        <span class="taller-icono">✿</span>
+                        <span class="taller-edad">Desde los 11 años</span>
+                        <h3>Gastronomía</h3>
+                        <p>Explora técnicas culinarias y prepara nuevas recetas.</p>
+                    </article>
+
+                    <article class="taller-item gastronomia">
+                        <span class="taller-icono">✿</span>
+                        <span class="taller-edad">Desde los 11 años</span>
+                        <h3>Repostería</h3>
+                        <p>Aprende a preparar y decorar deliciosos postres.</p>
+                    </article>
+
+                </div>
+            </div>
+
+            <!-- EDUCACIÓN Y ARTES ESCÉNICAS -->
+            <div class="categoria-talleres">
+                <h2 class="categoria-titulo">Educación y artes escénicas</h2>
+
+                <div class="talleres-grid">
+
+                    <article class="taller-item educacion">
+                        <img src="./assets/img/computacion_a.jpeg" alt="">
+                        <span class="taller-edad">Desde los 11 años</span>
+                        <h3>Computación</h3>
+                        <p>Desarrolla habilidades digitales y tecnológicas.</p>
+                    </article>
+
+                    <article class="taller-item educacion">
+                        <img src="./assets/img/teatro_i.jpeg" alt="">
+                        <span class="taller-edad">Desde los 16 años</span>
+                        <h3>Teatro adolescente</h3>
+                        <p>Expresa tus ideas y desarrolla tu creatividad escénica.</p>
+                    </article>
+
+                    <article class="taller-item educacion">
+                        <span class="taller-icono">✧</span>
+                        <span class="taller-edad">Adolescentes y adultos</span>
+                        <h3>Inglés</h3>
+                        <p>Mejora tus habilidades de comunicación en inglés.</p>
+                    </article>
+
+                </div>
+            </div>
+
+        </section>
+
+
+                <!-- ====== HISTORIA ====== -->
+        <section id="historia" class="historia">
+
+            <div class="texto_historia">
+                <span class="historia-etiqueta">NUESTRA HISTORIA</span>
+
+                <h1>Conoce nuestra historia</h1>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Perferendis temporibus optio quasi doloremque iste asperiores eveniet! 
+                    Vitae aliquid blanditiis, at laboriosam aut necessitatibus, dignissimos
+                    voluptatibus dolore facilis iure aliquam. Praesentium!
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Perferendis temporibus optio quasi doloremque iste asperiores eveniet! 
+                    Vitae aliquid blanditiis, at laboriosam aut necessitatibus, dignissimos
+                    voluptatibus dolore facilis iure aliquam. Praesentium!
+                </p>
+            </div>
+
+            <div class="imagenes_historia">
+                <div class="historia-logo">
+                    <img
+                        src="./assets/img/logo_1_ccarb.png"
+                        alt="Logotipo del Centro Educativo Ángel"
+                    >
+                </div>
+
+                <div class="historia-logo">
+                    <img
+                        src="./assets/img/logo_2_ccarb.png"
+                        alt="Segundo logotipo de la institución"
+                    >
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- ====== FOOTER / CONTACTO ====== -->
+    <footer id="contacto" class="footer">
+
+        <div class="footer-contenido">
+
+            <!-- Información -->
+            <div class="footer-info">
+                <img
+                    src="./assets/img/logo_1_ccarb.png"
+                    alt="Logo Centro Educativo Ángel"
+                    class="footer-logo"
+                >
+
+                <h2>Centro Educativo Ángel</h2>
+                <p>Bienestar para Todos, A.C.</p>
+
+                <p class="footer-descripcion">
+                    Un espacio para aprender, crecer y construir
+                    nuevas oportunidades para todos.
+                </p>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-contacto">
+                <h3>Contáctanos</h3>
+
+                <a
+                    href="https://www.facebook.com/profile.php?id=61572969947169"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-enlace"
+                    aria-label="Facebook"
+                >
+                    <i class="bi bi-facebook"></i>
+                    <span>Centro Cultural Angel</span>
+                </a>
+
+                <a
+                    href="https://wa.me/524493451594"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-enlace"
+                    aria-label="WhatsApp"
+                >
+                    <i class="bi bi-whatsapp"></i>
+                    <span>449-345-1594</span>
+                </a>
+
+                <a
+                    href="https://maps.app.goo.gl/JFkCZbtrLaKBmWuW6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="footer-enlace"
+                    aria-label="Ubicación"
+                >
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Benjamín de la mora 219, zona centro Aguascalientes, Aguascalientes</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Derechos reservados -->
+        <div class="footer-inferior">
+            <p>
+                © 2026 Centro Educativo Ángel.
+                Todos los derechos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

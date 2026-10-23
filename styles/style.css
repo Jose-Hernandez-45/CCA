@@ -1,0 +1,1331 @@
+/* =========================
+   RESET Y VARIABLES
+========================= */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --azul-principal: #65d5d4;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --rosa-principal: #D77CAE;
+    --morado-principal: #8064A9;
+    --font_s: "Quicksand", Arial, sans-serif;
+}
+
+/* =========================
+   HEADER Y LOGO
+========================= */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 35px;
+    font-family: var(--font_s);
+    background: linear-gradient(135deg, #101827, #243554);
+    border-bottom: 4px solid var(--azul-principal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: visible;
+    z-index: 100;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo2 {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.header-text {
+    color: var(--blanco);
+}
+
+.header-text h1 {
+    margin: 0;
+    color: var(--blanco);
+    font-family: var(--font_s);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header-text p {
+    margin: 5px 0 0;
+    color: var(--azul-principal);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+.options {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+    position: relative;
+    font-family: var(--font_s);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.options .a {
+    position: relative;
+    display: inline-block;
+    color: var(--blanco);
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.options .a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background-color: var(--rosa-principal);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.options .a:hover {
+    color: var(--rosa-principal);
+    transform: translateY(-3px);
+}
+
+.options .a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   MENÚ DE USUARIO
+========================= */
+.bi-person {
+    font-size: 24px;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.user-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    color: var(--blanco);
+    font-size: 28px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.user-icon:hover {
+    color: var(--rosa-principal);
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 230px;
+    padding: 15px;
+    box-sizing: border-box;
+    color: var(--negro);
+    background-color: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+}
+
+.user-dropdown p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.user-menu:hover .user-dropdown,
+.user-menu:focus-within .user-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.user-dropdown .user-btn {
+    display: block;
+    padding: 10px;
+    color: var(--blanco);
+    background-color: var(--morado-principal);
+    border: 2px solid var(--morado-principal);
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.user-dropdown .user-btn:hover {
+    color: var(--morado-principal);
+    background-color: var(--blanco);
+}
+
+.user-dropdown .register-btn {
+    color: var(--rosa-principal);
+    background-color: var(--blanco);
+    border-color: var(--rosa-principal);
+}
+
+.user-dropdown .register-btn:hover {
+    color: var(--blanco);
+    background-color: var(--rosa-principal);
+}
+
+/* =========================
+   BOTÓN HAMBURGUESA
+========================= */
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: var(--blanco);
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+    color: var(--rosa-principal);
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+#gallery {
+    position: relative;
+    width: 85%;
+    max-width: 1100px;
+    height: 450px;
+    margin: 40px auto;
+    overflow: hidden;
+    background: #111;
+    border-radius: 15px;
+}
+
+.gallery-container {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.gallery-item {
+    position: relative;
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.gallery-item::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    z-index: -2;
+    background-image: var(--gallery-bg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(18px);
+    opacity: 0.75;
+    transform: scale(1.05);
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    position: relative;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery-item figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: var(--blanco);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    font-size: 18px;
+}
+
+.gallery-navigation {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.nav-button {
+    padding: 12px 18px;
+    color: var(--blanco);
+    background-color: #3e3e3e54;
+    border: 2px solid #3e3e3e54;
+    border-radius: 8px;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #89888854;
+}
+
+
+/* =========================
+   DESCUBRIR: TALLERES DESTACADOS
+========================= */
+#descubrir.talleres {
+    padding: 80px 8%;
+    background: #f7f8fc;
+    border-top: 5px solid var(--morado-principal);
+}
+
+#descubrir .talleres-header {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.talleres-etiqueta {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--morado-principal);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+#descubrir .talleres-header h1 {
+    margin: 0 0 16px;
+    color: #101827;
+    font-family: var(--font_s);
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+#descubrir .talleres-header p {
+    margin: 0;
+    color: #626b7a;
+    font-family: var(--font_s);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+#descubrir .talleres-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#descubrir .taller-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e9eaf2;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(16, 24, 39, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#descubrir .taller-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px rgba(16, 24, 39, 0.13);
+}
+
+#descubrir .taller-imagen {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    background: #e8eaf0;
+}
+
+#descubrir .taller-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+#descubrir .taller-card:hover .taller-imagen img {
+    transform: scale(1.06);
+}
+
+#descubrir .taller-numero {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 9px 13px;
+    color: #ffffff;
+    background: #101827;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#descubrir .taller-info {
+    padding: 25px;
+}
+
+#descubrir .taller-categoria {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+#descubrir .taller-categoria.adultos {
+    color: var(--morado-principal);
+}
+
+#descubrir .taller-categoria.ninos {
+    color: #c45c91;
+}
+
+#descubrir .taller-info h2 {
+    margin: 0 0 12px;
+    color: #101827;
+    font-family: var(--font_s);
+    font-size: 23px;
+}
+
+#descubrir .taller-info p {
+    margin: 0;
+    color: #626b7a;
+    font-family: var(--font_s);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* =========================
+   HISTORIA
+========================= */
+.historia {
+    display: flex;
+    color: var(--negro);
+    font-family: var(--font_s);
+    border-top: 5px solid var(--morado-principal);
+}
+
+.texto_historia {
+    margin: 3%;
+}
+
+/* =========================
+   TALLERES
+========================= */
+.seccion-talleres {
+    padding: 85px 7%;
+    background: linear-gradient(180deg, #ffffff, #f7f5fb);
+    border-top: 5px solid var(--morado-principal);
+}
+
+.talleres-titulo {
+    max-width: 750px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.talleres-etiqueta {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--morado-principal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.talleres-titulo h1 {
+    margin: 0 0 18px;
+    color: #101827;
+    font-size: clamp(32px, 4vw, 46px);
+    font-family: var(--font_s);
+}
+
+.talleres-titulo p {
+    color: #687080;
+    font-size: 17px;
+    line-height: 1.8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.categoria-talleres {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+}
+
+.categoria-titulo {
+    margin: 0 0 25px;
+    padding-left: 15px;
+    color: #101827;
+    border-left: 5px solid var(--azul-principal);
+    font-size: 25px;
+}
+
+.talleres-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.taller-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--blanco);
+    border: 1px solid #ece8f2;
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(36, 53, 84, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.taller-item:hover {
+    border-color: var(--azul-principal);
+    box-shadow: 0 14px 30px rgba(36, 53, 84, 0.12);
+    transform: translateY(-6px);
+}
+
+.taller-item img {
+    display: block;
+    flex-shrink: 0;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.taller-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 220px;
+    margin: 0;
+    color: #278c8c;
+    background: #e7fafa;
+    border-radius: 0;
+    font-size: 42px;
+}
+
+.taller-edad {
+    align-self: flex-start;
+    display: inline-block;
+    margin: 20px 20px 10px;
+    padding: 7px 11px;
+    color: var(--morado-principal);
+    background: #f0eafa;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.taller-item h3 {
+    margin: 0 20px 10px;
+    color: #101827;
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.taller-item p {
+    margin: 0 20px 24px;
+    color: #687080;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.danza .taller-icono {
+    color: #c45c91;
+    background: #fff0f6;
+}
+
+.musica .taller-icono {
+    color: #278c8c;
+    background: #e7fafa;
+}
+
+.gastronomia .taller-icono {
+    color: #bd7b32;
+    background: #fff4e7;
+}
+
+.educacion .taller-icono {
+    color: var(--morado-principal);
+    background: #f0eafa;
+}
+
+/* ========================================
+   SECCIÓN HISTORIA
+======================================== */
+
+.historia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+
+    padding: 90px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff 0%,
+        #f7f8fc 100%
+    );
+
+    border-top: 4px solid var(--morado-principal);
+    overflow: hidden;
+}
+
+/* TEXTO */
+
+.texto_historia {
+    max-width: 600px;
+}
+
+.historia-etiqueta {
+    display: inline-block;
+    margin-bottom: 18px;
+
+    color: var(--morado-principal);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.texto_historia h1 {
+    position: relative;
+    margin: 0 0 28px;
+
+    color: #101827;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.texto_historia h1::after {
+    content: "";
+    display: block;
+
+    width: 75px;
+    height: 5px;
+
+    margin-top: 18px;
+
+    background: linear-gradient(
+        90deg,
+        var(--morado-principal),
+        var(--rosa-principal)
+    );
+
+    border-radius: 10px;
+}
+
+.texto_historia p {
+    margin: 0 0 18px;
+
+    color: #555b68;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+/* IMÁGENES Y LOGOTIPOS */
+
+.imagenes_historia {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 24px;
+
+    width: 100%;
+}
+
+.historia-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 240px;
+    padding: 24px;
+
+    background-color: #ffffff;
+    border: 1px solid #eceaf3;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(16, 24, 39, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.historia-logo:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 18px 40px rgba(16, 24, 39, 0.13);
+}
+
+.historia-logo img {
+    display: block;
+
+    width: 100%;
+    max-width: 190px;
+    max-height: 200px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ========================================
+   FOOTER / CONTACTO
+======================================== */
+
+.footer {
+    background: linear-gradient(
+        135deg,
+        #101827,
+        #243554
+    );
+
+    color: #ffffff;
+    padding: 55px 8% 0;
+}
+
+/* Contenido principal */
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 60px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+/* Información de la institución */
+
+.footer-info {
+    max-width: 480px;
+}
+
+.footer-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 15px;
+
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 8px;
+}
+
+.footer-info h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.footer-info > p {
+    margin: 0 0 12px;
+    color: #d8e0ef;
+    line-height: 1.7;
+}
+
+.footer-info .footer-descripcion {
+    max-width: 400px;
+    margin-top: 18px;
+    color: #bfc9da;
+    font-size: 14px;
+}
+
+/* Enlaces de contacto */
+
+.footer-contacto h3 {
+    margin: 10px 0 22px;
+    font-size: 20px;
+    color: var(--azul-principal);
+}
+
+.footer-enlace {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    width: fit-content;
+    margin-bottom: 18px;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-enlace i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+
+    color: var(--rosa-principal);
+    font-size: 19px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.footer-enlace:hover {
+    color: var(--azul-principal);
+    transform: translateX(5px);
+}
+
+.footer-enlace:hover i {
+    background: var(--morado-principal);
+    color: #ffffff;
+}
+
+/* Franja inferior */
+
+.footer-inferior {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-inferior p {
+    margin: 0;
+    color: #bfc9da;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 950px) {
+
+    /* TALLERES */
+    .seccion-talleres {
+        padding: 70px 5%;
+    }
+
+    .talleres-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* HISTORIA */
+    .historia {
+        gap: 35px;
+        padding: 70px 6%;
+    }
+
+    .imagenes_historia {
+        gap: 15px;
+    }
+
+    .historia-logo {
+        min-height: 190px;
+        padding: 18px;
+    }
+
+    .historia-logo img {
+        max-height: 155px;
+    }
+
+    /* DESCUBRIR */
+    #descubrir .talleres-container {
+        gap: 22px;
+    }
+
+    #descubrir .taller-imagen {
+        height: 300px;
+    }
+
+    #descubrir .taller-info {
+        padding: 22px;
+    }
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+@media (max-width: 600px) {
+
+    /* ENCABEZADO */
+    .header {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 12px 20px;
+    }
+
+    .logo2 {
+        width: 110px;
+    }
+
+    .header-text h1 {
+        font-size: 22px;
+    }
+
+    .header-text p {
+        font-size: 12px;
+    }
+
+    .options {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 0;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .user-menu {
+        order: 1;
+        margin-right: auto;
+    }
+
+    .user-icon {
+        padding: 6px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 12px);
+        right: 0;
+        z-index: 1001;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 220px;
+        max-width: 85vw;
+        padding: 12px;
+        box-sizing: border-box;
+        background: linear-gradient(135deg, #101827, #243554);
+        border: 1px solid var(--azul-principal);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links .a {
+        display: block;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .nav-links .a::after {
+        display: none;
+    }
+
+    .nav-links .a:hover {
+        color: var(--rosa-principal);
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 6px;
+        transform: none;
+    }
+
+    .user-dropdown {
+        right: auto;
+        left: 0;
+        width: 220px;
+        max-width: 80vw;
+    }
+
+
+    /* GALERÍA */
+    #gallery {
+        width: 95%;
+        height: 300px;
+        margin: 25px auto;
+    }
+
+    .gallery-item figcaption {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .nav-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+
+    /* DESCUBRIR */
+    #descubrir.talleres {
+        width: 100%;
+        padding: 45px 18px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    #descubrir .talleres-header {
+        width: 100%;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+
+    #descubrir .talleres-header h1 {
+        font-size: 28px;
+        line-height: 1.25;
+        margin: 12px 0 16px;
+        overflow-wrap: break-word;
+    }
+
+    #descubrir .talleres-header p {
+        max-width: 360px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    #descubrir .talleres-etiqueta {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    #descubrir .talleres-container {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    #descubrir .taller-card {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        box-sizing: border-box;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    #descubrir .taller-imagen {
+        position: relative;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        overflow: hidden;
+    }
+
+    #descubrir .taller-imagen img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #descubrir .taller-numero {
+        font-size: 14px;
+    }
+
+    #descubrir .taller-info {
+        padding: 22px 20px;
+        box-sizing: border-box;
+    }
+
+    #descubrir .taller-info h2 {
+        margin: 12px 0;
+        font-size: 21px;
+        line-height: 1.35;
+        overflow-wrap: break-word;
+    }
+
+    #descubrir .taller-info p {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* TALLERES */
+    .seccion-talleres {
+        padding: 55px 6%;
+    }
+
+    .talleres-titulo {
+        margin-bottom: 35px;
+    }
+
+    .talleres-titulo p {
+        font-size: 15px;
+    }
+
+    .categoria-talleres {
+        margin-bottom: 35px;
+    }
+
+    .categoria-titulo {
+        font-size: 21px;
+    }
+
+    .talleres-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .taller-item img,
+    .taller-item .taller-icono {
+        height: 240px;
+    }
+
+
+    /* HISTORIA */
+    .historia {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 50px 6%;
+        box-sizing: border-box;
+    }
+
+    .texto_historia {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .texto_historia h1 {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    .texto_historia p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .imagenes_historia {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .historia-logo {
+        min-width: 0;
+        min-height: 140px;
+        padding: 12px;
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+
+    .historia-logo img {
+        width: 100%;
+        max-height: 125px;
+        object-fit: contain;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        padding: 40px 6% 0;
+        box-sizing: border-box;
+    }
+
+    .footer-contenido {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding-bottom: 30px;
+    }
+
+    .footer-info {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .footer-info h2 {
+        font-size: 22px;
+    }
+
+    .footer-contacto h3 {
+        margin-top: 0;
+    }
+
+    .footer-inferior p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+   CELULARES PEQUEÑOS
+========================= */
+@media (max-width: 380px) {
+
+    /* ENCABEZADO */
+    .header {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .logo2 {
+        width: 75px;
+    }
+
+    .header-text h1 {
+        font-size: 18px;
+    }
+
+    .header-text p {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* DESCUBRIR */
+    #descubrir.talleres {
+        padding: 38px 14px;
+    }
+
+    #descubrir .talleres-header h1 {
+        font-size: 25px;
+    }
+
+    #descubrir .taller-imagen {
+        aspect-ratio: 4 / 3;
+    }
+
+    #descubrir .taller-info {
+        padding: 18px 16px;
+    }
+
+    #descubrir .taller-info h2 {
+        font-size: 19px;
+    }
+
+
+    /* HISTORIA */
+    .historia {
+        padding: 45px 5%;
+    }
+
+    .texto_historia h1 {
+        font-size: 27px;
+    }
+
+    .historia-etiqueta {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .imagenes_historia {
+        gap: 8px;
+    }
+
+    .historia-logo {
+        min-height: 120px;
+        padding: 8px;
+    }
+
+    .historia-logo img {
+        max-height: 100px;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .footer-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-info h2 {
+        font-size: 20px;
+    }
+}
+
