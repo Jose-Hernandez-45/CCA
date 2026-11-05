@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./styles/style.css">
+    <!-- SEO PRINCIPAL -->
+    <title>Centro Educativo Ángel | Talleres en Aguascalientes</title>
 
-    <!-- Fuente Quicksand -->
+    <meta name="description"
+        content="Centro Educativo Ángel en Aguascalientes. Descubre nuestros talleres de ballet, piano, guitarra, gastronomía, repostería, computación e inglés para niños, jóvenes y adultos.">
+
+    <meta name="author" content="Centro Educativo Ángel">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+
+    <!-- PALABRAS CLAVE -->
+    <meta name="keywords"
+        content="Centro Educativo Ángel, talleres en Aguascalientes, cursos para niños, ballet, piano, guitarra, computación, gastronomía, repostería, inglés">
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Centro Educativo Ángel">
+    <meta property="og:title" content="Centro Educativo Ángel | Bienestar para Todos">
+    <meta property="og:description"
+        content="Conoce nuestros talleres educativos, artísticos y culturales en Aguascalientes.">
+    <meta property="og:image"
+        content="https://centro-cultural-angel.web.app/assets/img/logo_cca_rbg2.png">
+    <meta property="og:url"
+        content="https://centro-cultural-angel.web.app/">
+
+    <!-- URL CANÓNICA -->
+    <link rel="canonical" href="https://centro-cultural-angel.web.app/">
+
+    <!-- DATOS ESTRUCTURADOS -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Centro Educativo Ángel",
+        "alternateName": "Bienestar para Todos, A.C.",
+        "description": "Centro educativo con talleres artísticos, culturales y educativos para niños, jóvenes y adultos.",
+        "url": "https://centro-cultural-angel.web.app/",
+        "logo": "https://centro-cultural-angel.web.app/assets/img/logo_cca_rbg2.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Aguascalientes",
+            "addressRegion": "Aguascalientes",
+            "addressCountry": "MX"
+        }
+    }
+    </script>
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" href="./styles/home_styles.css">
+
+    <!-- FUENTE QUICKSAND -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
-    <!-- Icono de pestaña -->
-    <link rel="icon" type="image/png" href="./assets/img/logo_1_ccarb.png">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="./assets/img/logo_cca_rbg2.png">
 
-    <!-- Bootstrap Icons -->
+    <!-- BOOTSTRAP ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <title>Home</title>
 </head>
+
 
 <body>
 
@@ -30,7 +77,7 @@
         <div class="header-logo">
             <a href="#inicio">
                 <img
-                    src="./assets/img/logo_1_ccarb.png"
+                    src="./assets/img/logo_cca_rbg2.png"
                     class="logo2"
                     alt="Logo Centro Educativo Ángel"
                 >
@@ -62,7 +109,7 @@
                         Iniciar sesión
                     </a>
 
-                    <a href="./templates/registro.html" class="user-btn register-btn">
+                    <a href="./templates/register.html" class="user-btn register-btn">
                         Crear cuenta
                     </a>
                 </div>
@@ -105,7 +152,19 @@
                 </figure>
 
                 <figure class="gallery-item">
-                    <img src="./assets/img/evento.jpeg" alt="Evento del Centro Educativo Ángel">
+                    <img src="./assets/vacant/v_canto.jpeg" alt="Imagen principal">
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/vacant/v_dyp.jpeg" alt="Imagen principal">
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/vacant/v_gut_a.jpeg" alt="Imagen principal">
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/vacant/v_sax.jpeg" alt="Imagen principal">
                 </figure>
 
             </div>
@@ -121,11 +180,12 @@
                 </button>
             </nav>
         </section>
+
         <!-- ====== DESCUBRIR ===== -->
         <section id="descubrir" class="talleres">
             <div class="talleres-header">
                 <span class="talleres-etiqueta">APRENDE ALGO NUEVO</span>
-                <h1>Descubre los nuevos talleres</h1>
+                <h1>Descubre los proximos talleres</h1>
                 <p>
                     Aprende, crea y desarrolla nuevas habilidades
                     con nuestros talleres para todas las edades.
@@ -260,7 +320,7 @@
                     </article>
 
                     <article class="taller-item musica">
-                        <span class="taller-icono">♫</span>
+                        <img src="./assets/img/guitarra electrica.jpeg" alt="">
                         <span class="taller-edad">Desde los 11 años</span>
                         <h3>Guitarra eléctrica</h3>
                         <p>Explora sonidos, riffs y técnicas de guitarra.</p>
@@ -306,7 +366,7 @@
                     </article>
 
                     <article class="taller-item educacion">
-                        <img src="./assets/img/teatro_i.jpeg" alt="">
+                        <img src="./assets/img/teatro_A.jpeg" alt="">
                         <span class="taller-edad">Desde los 16 años</span>
                         <h3>Teatro adolescente</h3>
                         <p>Expresa tus ideas y desarrolla tu creatividad escénica.</p>
@@ -326,7 +386,7 @@
 
 
                 <!-- ====== HISTORIA ====== -->
-        <section id="historia" class="historia">
+        <!-- <section id="historia" class="historia">
 
             <div class="texto_historia">
                 <span class="historia-etiqueta">NUESTRA HISTORIA</span>
@@ -364,7 +424,7 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
 
 
     </main>
